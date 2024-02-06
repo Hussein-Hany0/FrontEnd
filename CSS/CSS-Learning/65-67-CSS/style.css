@@ -1,0 +1,119 @@
+body {
+    height: 100vw;
+}
+
+.assign-1 div {
+    width: 300px;
+    display: flex;
+    height: 200px;
+    color: #03a9f4;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 100px auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEE;
+    box-shadow: 0px 0px 0px #03a9f4 , 0px 0px 0px #e91e63;
+}
+
+.assign-1 div::before {
+    content: "";
+    z-index: -1;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    transform: rotate(-5deg);
+    background-color:  #03a9f4;
+}
+
+.assign-1 div::after {
+    content: "";
+    z-index: -2;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    transform: rotate(5deg);
+    background-color:  #e91e63;
+}
+
+.assign-2 div {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    margin: 50px auto;
+    font-weight: bold;
+    border-radius: 50%;
+    align-items: center;
+    border-width: 7px;
+    border-style: solid;
+    justify-content: center;
+    position: relative;
+    background-color: #EEE;
+    border-color: #e91e63 #e91e63 #e91e63 white;
+}
+
+.assign-2 div::before {
+    content: "";
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute; 
+    border-width: 7px;
+    border-style: solid;
+    transform: scale(1.07 , 1.07); /* Or increase the width and height with 14 px */
+    background-color: #EEE;
+    border-color: #2196f3 white #2196f3 #2196f3;
+}
+
+.assign-3 div {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    margin: 50px auto;
+    font-weight: bold;
+    border-radius: 50%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    background-color: #EEE;
+}
+
+.assign-3 div::after {
+    content: "";
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute; 
+    border-width: 7px;
+    transition: .5s;
+    border-style: solid;
+    background-color: #EEE;
+    border-color: #e91e63 #e91e63 #e91e63 white;
+}
+
+.assign-3 div:hover::after {
+   transform: rotate(360deg);
+}
+
+.assign-3 div::before {
+    content: "";
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute; 
+    border-width: 7px;
+    border-style: solid;
+    transform: scale(1.07 , 1.07); /* Or increase the width and height with 14 px */
+    background-color: #EEE;
+    transition-duration: .5s;
+    transition-delay: .5s;
+    border-color: #2196f3 white #2196f3 #2196f3;
+}
+
+.assign-3 div:hover::before {
+    transform: scale(1.07 , 1.07) rotate(360deg);
+ }

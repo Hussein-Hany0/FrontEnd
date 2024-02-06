@@ -1,0 +1,178 @@
+body {
+    height: 200vw;
+}
+
+.assign-1 {
+    overflow: hidden;
+}
+
+.assign-1 div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.assign-1 .green {
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+    background-color: #009688;
+}
+
+.assign-1 .red {
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+    background-color: #f44336;
+}
+
+.assign-1 .blue {
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+    background-color: #03a9f4;
+}
+
+.assign-1 .black {
+    top: 30px;
+    left: 20px;
+    z-index: -1;
+    background-color: #333333;
+}
+
+.seperator {
+    margin-top: 150px;
+    margin-bottom: 30px;
+
+}
+
+.assign-2 div {
+    margin: auto;
+    width: 400px;
+    padding: 30px;
+    border-width: 2px;
+    position: relative;
+    border-style: solid;
+    background-color: #EEE;
+    border-color: #f44336 #2196f3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-2 div .top-left {
+    top: -15px;
+    left: -20px;
+    color: white;
+    padding: 5px 15px;
+    position: absolute; 
+    background-color: #2196f3;
+    border-right: 2px solid #f44336;
+}
+
+.assign-2 div .top-right {
+    top: -15px;
+    color: white;
+    right: -20px;
+    padding: 5px 15px;
+    position: absolute; 
+    background-color: #2196f3;
+    border-left: 2px solid #f44336;
+}
+
+.assign-2 div .bottom-left {
+    left: -20px;
+    bottom: -15px;
+    color: white;
+    padding: 5px 15px;
+    position: absolute; 
+    background-color: #2196f3;
+    border-right: 2px solid #f44336;
+}
+
+.assign-2 div .bottom-right {
+    right: -20px;
+    bottom: -15px;
+    color: white;
+    padding: 5px 15px;
+    position: absolute; 
+    background-color: #2196f3;
+    border-left: 2px solid #f44336;
+}
+
+.seperator2 {
+    margin: 30px 0px;
+}
+
+.main-list {
+    margin: auto;
+    width: 400px;
+    padding-left: 0px;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.one,
+.two,
+.three {
+    padding: 20px;
+    margin: 10px 0px;
+    background-color: #EEE;
+}
+
+
+.main-list .one .one-list li,
+.main-list .two .two-list li,
+.main-list .three .three-list li {
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: white;
+}
+
+.main-list .three .three-list {
+    list-style-position: inside;
+    padding: 0;
+}
+
+table {
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    background-color: #EEE;
+    border-collapse: collapse;
+    border-bottom: 4px solid #009688;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table thead th {
+    color: white;
+    padding: 20px;
+    height: fit-content;
+    background-color: #404040;
+}
+
+table thead th,
+table tbody td {
+    border: 3px solid white;
+}
+
+table tbody tr .delete {
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #e91e63;
+}
+
+table tbody tr .view {
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #03a9f4;
+}
+
+table tbody tr .view:hover,
+table tbody tr .delete:hover {
+    cursor: pointer;
+}
+
+
+
+

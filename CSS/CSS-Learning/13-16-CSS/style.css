@@ -1,0 +1,25 @@
+.parent .child .title {
+    color: red;
+}
+
+.parent .title {
+    color: blue;
+}
+
+p , .title {
+    color: green;
+}
+
+.assign-2 div {
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    max-width: 400px;
+    width: fit-content;
+    background-color: brown;
+}
+
+.assign-2 .four {
+    height: 35px;
+    overflow-y: hidden;
+}

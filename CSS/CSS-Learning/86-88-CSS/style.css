@@ -1,0 +1,80 @@
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-position {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(50% , 50%);
+}
+
+.circle-100 {
+    width: 100px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.circle-200 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.assign-2 div {
+    width: 300px;
+    padding: 20px;
+    margin: 30px auto;
+    position: relative;
+    background-color: #EEE;
+}
+
+.assign-2 div.arrow.top::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background-color: transparent;
+    border: 14px solid #EEE;
+    border-color: transparent transparent #EEE transparent;
+    top: -28px;
+    right: 46%;
+}
+
+.assign-2 div.arrow.right::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background-color: transparent;
+    border: 14px solid #EEE;
+    border-color: transparent transparent transparent #EEE;
+    top: 28%;
+    right: -28px;
+}
+
+.assign-2 div.arrow.bottom::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background-color: transparent;
+    border: 14px solid #EEE;
+    border-color: #EEE transparent transparent transparent;
+    bottom: -28px;
+    right: 46%;
+}
+
+.assign-2 div.arrow.left::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background-color: transparent;
+    border: 14px solid #EEE;
+    border-color: transparent #EEE transparent transparent;
+    top: 28%;
+    left: -28px;
+}

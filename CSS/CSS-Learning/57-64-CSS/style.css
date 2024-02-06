@@ -1,0 +1,287 @@
+
+body {
+    height: 200vw;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-1 .grid {
+    padding: 20px;
+    width: 800px;
+    margin: auto;
+    height: 400px;
+    display: grid;
+    row-gap: 20px;
+    background-color: #ddd;
+    align-content: flex-start;
+    counter-reset: div-counter;
+    grid-template-rows: 50px 1fr;
+    justify-content: space-between;
+    grid-template-columns: 230px 230px 230px;
+}
+
+.assign-1 .grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #607d8b;
+}
+
+.assign-1 .grid div::before {
+    color: white;
+    font-weight: bold;
+    background-color: #607d8b;
+    counter-increment: div-counter;
+    content: "Element "counter(div-counter);
+}
+
+.assign-2 .layout {
+    display: grid;
+    height: 45vw;
+    grid-template-columns: repeat(10 , 1fr);
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: "header header header header header header header header header header"
+                         "section section section section section section section aside aside aside"
+                         "footer footer footer footer footer footer footer footer footer footer";
+}
+
+.assign-2 .layout header {
+    padding: 10px;
+    color: white;
+    grid-area: header;
+    background-color: #03a9f4;
+}
+
+.assign-2 .layout header::before {
+    content: "Header";
+}
+
+.assign-2 .layout section {
+    padding: 10px;
+    color: white;
+    grid-area: section;
+    background-color: #ff5722;
+}
+
+.assign-2 .layout section::before {
+    content: "Section";
+}
+
+.assign-2 .layout aside {
+    padding: 10px;
+    color: white;
+    grid-area: aside;
+    background-color: #607d8b;
+}
+
+.assign-2 .layout aside::before {
+    content: "Aside";
+}
+
+.assign-2 .layout footer {
+    padding: 10px;
+    color: white;
+    grid-area: footer;
+    background-color: #009688;
+}
+
+.assign-2 .layout footer::before {
+    content: "Footer";
+}
+
+.assign-3 .grid {
+    padding: 20px;
+    width: 800px;
+    display: grid;
+    margin: auto;
+    height: 400px;
+    row-gap: 10px;
+    column-gap: 10px;
+    background-color: #ddd;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr 1fr auto;
+}
+
+.assign-3 .grid div {
+    color: white;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    background-color: #403f3f;
+}
+
+.assign-4 .grid {
+    width: 800px;
+    margin: auto;
+    height: 400px;
+    padding: 20px;
+    display: grid;
+    gap: 15px 15px;
+    background-color: #ddd;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+.assign-4 .grid div {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2196f3;
+}
+
+.assign-4 .grid .one {
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+}
+
+.assign-4 .grid .two {
+    grid-column: 1 / 3;
+}
+
+.assign-4 .grid .five {
+    grid-column: 2 / 4;
+    grid-row: 3 / 6;
+}
+
+.assign-4 .grid .eight {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.assign-5 .grid {
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    height: 400px;
+    display: grid;
+    column-gap: 10px;
+    background-color: #ddd;
+    align-content: space-between;
+    grid-template-columns: auto auto;
+}
+
+.assign-5 .grid div {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #e91e63;
+}
+
+.assign-6 .grid {
+    display: grid;
+    gap: 10px 10px;
+    width: 1200px;
+    margin: 30px auto;
+    background-color: #EEE;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.assign-6 .grid div {
+    padding: 10px;
+    background-color: white;
+    border-bottom: 5px solid #fc5e2d;
+}
+
+.assign-6 .grid div h1,
+.assign-6 .grid div h2,
+.assign-6 .grid div p {
+    margin: 0;
+}
+
+.assign-6 .grid div h1 {
+    font-size: 22px;
+}
+
+.assign-6 .grid div .bold {
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+.assign-6 .grid div h2 {
+    margin: 5px 0px;
+    font-size: 15px;
+    color: #bfbfbf;
+}
+
+
+.assign-6 .grid .one::before,
+.assign-6 .grid .two::before,
+.assign-6 .grid .three::before,
+.assign-6 .grid .four::before,
+.assign-6 .grid .five::before,
+.assign-6 .grid .six::before,
+.assign-6 .grid .seven::before,
+.assign-6 .grid .eight::before,
+.assign-6 .grid .nine::before,
+.assign-6 .grid .ten::before {
+    content: "";
+    width: 5px;
+    height: 15px;
+    right: 28px;
+    bottom: 22px;
+    position: absolute;
+    transform: rotate(20deg);
+    border-radius: 0% 0% 30% 40%;
+    background-color: lightgrey;
+}
+
+.assign-6 .grid .one::after,
+.assign-6 .grid .two::after,
+.assign-6 .grid .three::after,
+.assign-6 .grid .four::after,
+.assign-6 .grid .five::after,
+.assign-6 .grid .six::after,
+.assign-6 .grid .seven::after,
+.assign-6 .grid .eight::after,
+.assign-6 .grid .nine::after,
+.assign-6 .grid .ten::after {
+    content: "";
+    width: 5px;
+    height: 15px;
+    right: 20px;
+    bottom: 20px;
+    position: absolute;
+    transform: rotate(20deg);
+    border-radius: 0% 0% 30% 40%;
+    background-color: lightgrey;
+}
+
+.assign-6 .grid .one {
+    grid-column: 1 / 3;
+}
+
+.assign-6 .grid div {
+    position: relative;
+}
+
+.assign-6 .grid .five {
+    color: white;
+    grid-column: 2 / 4;
+    background-color: black;
+}
+
+.assign-6 .grid .six {
+    grid-column: 2 / 4;
+}
+
+.assign-6 .grid .four {
+    grid-row: 2 / 4;
+}
+
+.assign-6 .grid .three {
+    color: white;
+    grid-row: 1 / 4;
+    grid-column: 4 / 5;
+    background-color: black;
+}
+
+.assign-6 .grid .eight {
+    color: white;
+    background-color: black;
+}

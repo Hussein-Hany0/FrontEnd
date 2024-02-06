@@ -1,0 +1,183 @@
+body {
+    height: 150vw;
+}
+
+
+:root {
+    --mainColor: #ff5722;
+}
+
+.assign-1 h1 {
+    width: 150px;
+    color: white;
+    padding: 20px;
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+    background-color: var(--mainColor , #2196f3);
+}
+
+.assign-1 h1::after {
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    transform: skew(10deg , 10deg);
+    background-color: var(--mainColor , #2196f3);
+}
+
+.assign-1 ::before {
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    z-index: -2;
+    height: 100%;
+    position: absolute;
+    transform: skew(-10deg , -10deg);
+    background-color: var(--mainColor , #2196f3);
+}
+
+
+.assign-2 h1 {
+    width: 110px;
+    color: white;
+    padding: 20px;
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+    background-color: #009688
+}
+
+.assign-2 h1::before {
+    top: 0;
+    left: -50px;
+    content: "";
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    transform: skewX(30deg);
+    background-color: #009688
+}
+
+.assign-2 h1::after {
+    top: 0;
+    left: -32px;
+    content: "";
+    width: 5%;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    transform: skewX(30deg);
+    background-color: white;
+    transform: matrix(1 , 0 , 3 , 5 , 2 , -2); /* assignment 3 */
+}
+
+.assign-4 div {
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    position: relative;
+    background-color: #607d8b;
+    border-bottom: 5px solid black;
+}
+
+.assign-4 div::after {
+    content: "";
+    width: 68%;
+    height: 68%;
+    left: 29px;
+    bottom: 65%;
+    position: absolute;
+    transform: rotate(45deg);
+    border: 3px solid white;
+    background-color: black;
+}
+
+.assign-4 div::before {
+    left: 10px;
+    bottom: 5px;
+    content: "Elzero";
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-5 .box {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+}
+
+.assign-5 .box:hover {
+    transform: rotateY(-180deg);
+}
+
+.assign-5 .box .front-face,
+.assign-5 .box .back-face {
+    width: 200px;    
+    height: 200px;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-5 .box .front-face {
+    background-color: #fa3664;
+}
+
+.assign-5 .box .back-face {
+    transform: rotateY(180deg);
+    background-color: #2696f4;
+}
+
+.assign-6 .box {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+}
+
+.assign-6 .box:hover {
+    transform: rotatex(-180deg);
+}
+
+.assign-6 .box .front-face,
+.assign-6 .box .back-face {
+    width: 200px;    
+    height: 200px;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-6 .box .front-face {
+    background-color: #fa3664;
+}
+
+.assign-6 .box .back-face {
+    transform: rotatex(180deg);
+    background-color: #2696f4;
+}

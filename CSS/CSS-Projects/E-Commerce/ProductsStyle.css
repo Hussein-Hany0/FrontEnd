@@ -1,0 +1,243 @@
+/* Global values Start*/
+* {
+    box-sizing: border-box;
+}
+/* Gloable values end */
+
+::selection {
+    background-color: #009688;
+}
+
+/* container styling start */
+.container {
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* container styling end */
+
+/* Header styling start */
+
+header {
+    margin-bottom: 10px;
+}
+
+header .container .header-socials {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    column-gap: 20px;
+}
+
+header .container .logo {
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    color: black;
+}
+
+header .container .header-socials li a {
+    font-size: 30px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+header .container .header-socials li .fa-google {
+    color: white;
+    background: #dd4b39;
+}
+
+header .container .header-socials li .fa-linkedin {
+    color: white;
+    background: #007bb5;
+}
+
+header .container .header-socials li .fa-whatsapp {
+    color: white;
+    background: #009900b8;
+}
+
+/* Header styling End */
+
+
+/* nav styling start */
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .header-nav {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.container .header-nav div {
+    transition: margin .3s;
+    font-size: 20px;
+    color: black;
+}
+
+nav .container a {
+    text-decoration: none;
+}
+
+.container .header-nav div:hover {
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bb5;
+}
+
+.container .header-social .header-social-icons {
+    padding: 0;
+    display: flex;
+    column-gap: 15px;
+    list-style: none;
+    align-items: center;
+}
+
+.container .header-social .header-social-icons li a {
+    font-size: 50px;
+    color: black;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.container .header-social .header-social-icons li:hover {
+    opacity: .7;
+}
+/* nav styling end */
+
+/* section styling start */
+
+section {
+    padding: 20px;
+    height: calc(260vh - 162px);
+}
+
+section .container {
+    flex-wrap: wrap ;
+}
+
+section .container .historical-books {
+    display: flex;
+    width: 100%;
+    column-gap: 30px;
+    height: fit-content;
+}
+
+section .container .historical-books .h-book {
+    transition: .5s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+section .container .historical-books .h-book:hover {
+    transform: rotateX(-180deg);
+}
+
+section .container .historical-books .h-book .book-face {
+    backface-visibility: hidden;
+}
+
+section .container .historical-books .h-book .book-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    backface-visibility: hidden;
+    transform: translate(-50%, -50%) rotateX(180deg);
+}
+
+section .container .historical-books .h-book img {
+    width: 100%;
+    height: 300px;
+}
+
+section .container .historical-books .h-book h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+section .container .historical-books .h-book h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section .container .historical-books .h-book p {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+/* section styling End /*
+
+/* Footer styling start */
+
+footer {
+    background-color: white;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .footer-nav {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.container .footer-nav div {
+    transition: margin .3s;
+    font-size: 20px;
+}
+
+.container .footer-nav div:hover {
+    cursor: pointer;
+    color: black;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bb5;
+}
+
+.container .footer-social .footer-social-icons {
+    padding: 0;
+    display: flex;
+    column-gap: 15px;
+    list-style: none;
+    align-items: center;
+}
+
+.container .footer-social .footer-social-icons li a {
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.container .footer-social .footer-social-icons li .fa-facebook {
+    color: white;
+    background: #3B5998;
+}
+
+.container .footer-social .footer-social-icons li .fa-twitter {
+    color: white;
+    background: #3B5998;
+}
+
+.container .footer-social .footer-social-icons li .fa-youtube {
+    color: white;
+    background: #bb0000;
+}
+
+.container .footer-social .footer-social-icons li:hover {
+    opacity: .7;
+}
+
+/* Footer styling end */

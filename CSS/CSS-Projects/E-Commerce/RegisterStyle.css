@@ -1,0 +1,169 @@
+/* Global values Start*/
+* {
+    box-sizing: border-box;
+}
+/* Gloable values end */
+
+::selection {
+    background-color: #009688;
+}
+
+/* container styling start */
+.container {
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* container styling end */
+
+/* header styling start */
+header .container .top {
+    height: 70px;
+    margin: auto;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    background-color: #10cab7;
+}
+
+header .container .bottom {
+    height: 50px;
+    margin: auto;
+    background-color: #3b8a82;
+}
+/* header styling End */
+
+/* register section styling start */
+.register {
+    height: 100vh;
+}
+
+.register .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.register .container form {
+    width: 500px;
+    margin: auto;
+}
+
+.register .container form label{
+    display: block;
+    transition: .3s;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.register .container form label:hover {
+    padding-left: 20px;
+}
+
+.register .container form input {
+    border: none;
+    border-radius: 5px;
+}
+
+.register .upload {
+    display: none;
+    position: relative;
+}
+
+.register .container form .upload-lable  {
+    cursor: pointer;
+}
+
+.register .container form label:first-child {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    background-size: cover;
+    background-image: url("img/icon-park_upload-picture.svg");
+}
+
+.register .container form button[type=submit] {
+    color: rebeccapurple !important;
+}
+
+.register .f-name {
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    display: block;
+    background-color: #d9d9d930;
+}
+
+.register .l-name {
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    display: block;
+    background-color: #d9d9d930;
+}
+
+.register .email {
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    display: block;
+    background-color: #d9d9d930;
+}
+
+.register .password {
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    display: block;
+    background-color: #d9d9d930;
+}
+
+.register .password-repeat {
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    display: block;
+    background-color: #d9d9d930;
+}
+
+.register .date {
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    display: block;
+    background-color: #d9d9d930;
+}
+
+.register a {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px auto;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgb(15, 132, 134);
+}
+
+.register .container form .submit:hover {
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #10cab7;
+}
+
+/* register section styling end */
+
+/* footer styling start */
+footer .foot {
+    height: 50px;
+    margin: auto;
+    background-color: #10cab7;
+}
+/* footer styling end */

@@ -1,0 +1,50 @@
+.assign-1 .parent {
+    overflow: hidden;
+    width: 100%;
+    background-color: #EEE;
+}
+
+.assign-1 .parent div {
+    float: left;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #DDD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-1 .parent .full-width {
+    width:calc(100% - 80px);
+}
+
+.assign-1 .parent .third {
+    width: calc((100% - 240px) /3);
+}
+
+.assign-1 .parent .half {
+    width: calc((100% - 160px) /2);
+}
+
+.assign-1 .parent .quarter {
+    width: calc((100% - 320px) / 4);
+}
+
+.assign-2 div {
+    color: black;
+    width: 300px;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 20px auto;
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-2 .one {
+    background-color: rgb(238, 238, 238 , 10%);
+}
+
+.assign-2 .two {
+    opacity: 10%;
+}

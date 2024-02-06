@@ -1,0 +1,134 @@
+body {
+    height: 100vw;
+    counter-reset: divs;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.assign-1 div {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #EEE;
+    margin: 20px calc((100% - 312px) / 6);  
+    border: 2px solid black; 
+    box-shadow: 5px 5px 0 #2196f3 , -5px -5px 0 #e91e63;
+}
+
+.assign-1 div::before {
+    left: 25%;
+    content: "Element";
+    position: absolute;
+    line-height: 100px;
+}
+
+.assign-1 div::after {
+    top: -10px;
+    left: 40px;
+    color: white;
+    padding: 0px 5px;
+    border-radius: 50%;
+    position: absolute;
+    content: counter(divs);
+    counter-increment: divs;
+    background-color: black;
+}
+
+.assign-2 div {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 10% 50%;
+    background-color: #EEE;
+    box-shadow: 0 0 8px 2px #00000078 inset;
+}
+
+.assign-3 .parent {
+    width: 550px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.assign-3 .parent .one {
+    padding: 10px;
+    float: left;
+    width: 235px;
+    height: 200px;
+    background-color: #eee;
+}
+
+.assign-3 .parent .two {
+    padding: 10px;
+    float: right;
+    width: 235px;
+    height: 200px;
+    background-color: #eee;
+}
+
+.assign-3 .parent .one .type1 {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #03a9f4;
+}
+
+.assign-3 .parent .one .price1 {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 44px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    font-size: 30px;
+    background-color: #DDD;
+}
+
+.assign-3 .parent .two .type2    {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #03a9f4;
+}
+
+.assign-3 .parent .two .price2 {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 44px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    font-size: 30px;
+    background-color: #DDD;
+}
+
+.assign-3 .parent .one::after {
+    content: "";
+    top: 0;
+    left: 273px;
+    height: 100%;
+    width: 1.5px;
+    position: absolute;
+    background-color: #03a9f4;
+}
+
+.assign-3 .parent .two::before {
+    content: "Or";
+    top: 100px;
+    left: 265px;
+    padding: 2.5px;
+    font-size: 11px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #03a9f4;
+}
