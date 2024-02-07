@@ -1,0 +1,75 @@
+//All assignments are in https://elzero.org/sass-2021-assignments-lesson-16-to-19/
+// Import global rules
+//@import './sass/layout/global-rules'
+// @use './sass/layout/global-rules';
+
+// @use "./sass/pages/contact.scss";
+
+// @use "./sass/variables/colors.scss" as *;
+
+$num: 2;
+$start: 100;
+
+@function double($size) {
+  @return $size * $num;
+}
+
+@while $start <= 1600 {
+
+    .box-#{$start} {
+        width: #{$start}px;
+        height: #{double($start)}px;
+    }
+
+    $start : $start * 2;
+}
+
+// Output
+
+// .box-100 {
+//   width: 100px;
+//   height: 200px;
+// }
+
+// .box-200 {
+//   width: 200px;
+//   height: 400px;
+// }
+
+// .box-400 {
+//   width: 400px;
+//   height: 800px;
+// }
+
+// .box-800 {
+//   width: 800px;
+//   height: 1600px;
+// }
+
+// .box-1600 {
+//   width: 1600px;
+//   height: 3200px;
+// }
+
+//############################################################################
+
+@function get-total($numbers...) {
+    $total : 0;
+
+    @each $number in $numbers {
+        $total : $total + $number;
+    }
+
+    @return $total;
+}
+
+.box {
+    top: get-total(100, 50, 20);
+    right: get-total(100, 50);
+  }
+  
+//   // Output
+//   .box {
+//     top: 170;
+//     right: 150;
+//   }

@@ -1,0 +1,240 @@
+//All assignments are in https://elzero.org/sass-2021-assignments-lesson-11-to-15/
+// Import global rules
+//@import './sass/layout/global-rules'
+// @use './sass/layout/global-rules';
+
+// @use "./sass/pages/contact.scss";
+
+// @use "./sass/variables/colors.scss" as *;
+
+@mixin arrow($direction) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    @if $direction == 'top' {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40px;
+        border-bottom-color: red;
+    } @else if $direction == 'right' {
+        top: 50%;
+        transform: translateY(-50%);
+        right: -40px;
+        border-left-color: red;
+    } @else if $direction == 'bottom' {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -40px;
+        border-top-color: red;
+    } @else if $direction == 'left' {
+        top: 50%;
+        transform: translateY(-50%);
+        left: -40px;
+        border-right-color: red;
+    } @else {
+        @error 'The value #{$direction} is in valied';
+    }
+}
+
+.element {
+    &:before {
+        @include arrow("left");
+    }
+}
+.element {
+    &:before {
+        @include arrow("right");
+    }
+}
+.element {
+    &:before {
+        @include arrow("top");
+    }
+}
+.element {
+    &:before {
+        @include arrow("bottom");
+    }
+}
+
+//##########################################################################
+
+$grid-cols : 16;
+
+@for $i from 1 through $grid-cols {
+    .col-#{$i} {
+        width: percentage( $i / $grid-cols);
+    }
+}
+
+
+//#############################################################################
+
+$names:
+  "books" 20px red 18,
+  "games" 30px green 18,
+  "dvds" 20px blue;
+
+@each $name , $padding , $color , $font-size in $names {
+    .#{$name} {
+        padding: $padding;
+        border-bottom: 2px solid $color;
+        color: #444;
+        @if $font-size != null {
+            font-size: #{$font-size}px;
+        } @else {
+            font-size : 16px;
+        }
+    }
+}
+
+// Output
+
+// .books {
+//   padding: 20px;
+//   font-size: 18px;
+//   border-bottom: 2px solid red;
+//   color: #444;
+// }
+
+// .games {
+//   padding: 30px;
+//   font-size: 18px;
+//   border-bottom: 2px solid green;
+//   color: #444;
+// }
+
+// .dvds {
+//   padding: 20px;
+//   font-size: 16px;
+//   border-bottom: 2px solid blue;
+//   color: #444;
+// }
+
+//################################################################################
+
+$init: 1;
+
+@while $init <= 5 {
+    .circle-#{$init * 100} {
+        width: #{$init * 100}px;
+        height: #{$init * 100}px;
+        border-radius: #{$init * 100 / 2}px;
+    }
+    $init : $init + 1;
+}
+
+// Output
+
+// .circle-100 {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 50px;
+// }
+// .circle-200 {
+//   width: 200px;
+//   height: 200px;
+//   border-radius: 100px;
+// }
+// .circle-300 {
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 150px;
+// }
+// .circle-400 {
+//   width: 400px;
+//   height: 400px;
+//   border-radius: 200px;
+// }
+// .circle-500 {
+//   width: 500px;
+//   height: 500px;
+//   border-radius: 250px;
+// }
+
+//################################################################################
+
+
+@for $init from 1 through  5 {
+    .circle-#{$init * 100} {
+        width: #{$init * 100}px;
+        height: #{$init * 100}px;
+        border-radius: #{$init * 100 / 2}px;
+    }
+}
+
+//##############################################################################
+
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+// Using
+textarea {
+    @include placeholder {
+        color: #777;
+    }
+}
+
+//   // Output
+//   textarea.placeholder {
+//     color: #777;
+//   }
+//   textarea:-moz-placeholder {
+//     color: #777;
+//   }
+//   textarea::-moz-placeholder {
+//     color: #777;
+//   }
+//   textarea:-ms-input-placeholder {
+//     color: #777;
+//   }
+//   textarea::-webkit-input-placeholder {
+//     color: #777;
+//   }
+
+//##############################################################################
+
+@mixin flex-center($width: 400) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: #{$width}px;
+}
+
+// Using
+.box-one {
+    @include flex-center(400px);
+}
+.box-two {
+    @include flex-center;
+}
+
+//   // Output
+//   .box-one {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+//     width: 400px;
+//   }
+  
+//   .box-two {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 400px;
+//   }

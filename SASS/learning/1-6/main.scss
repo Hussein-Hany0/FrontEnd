@@ -1,0 +1,268 @@
+// all this assignments are in https://elzero.org/sass-2021-assignments-lesson-1-to-6/
+
+// Import global rules
+//@import './sass/layout/global-rules'
+// @use './sass/layout/global-rules';
+
+// @use "./sass/pages/contact.scss";
+
+// @use "./sass/variables/colors.scss" as *;
+
+//write sass code to git this output
+// .content > .box {
+//     padding: 15px;
+//   }
+//   .content > .box > .title {
+//     font-size: 18px;
+//   }
+//   .content .cat {
+//     padding: 15px;
+//   }
+//   .content.premium:before {
+//     content: "Premium Box";
+//   }
+//   .content.premium:hover {
+//     background-color: #eee;
+//  }
+
+.content {
+    > .box {
+        padding: 15px;
+        > .title {
+            font-size: 18px;
+        }
+    }
+    .cat {
+        padding: 15px;
+    }
+
+    &.premium::before{
+        content: "premium box";
+    }
+
+    &.premium:hover {
+        background-color: #EEE;
+    }
+}
+//########################################################################
+
+//Write sass code to git this output with 3 ways
+// .class > .child {
+//     padding: 10px;
+//   }
+
+.class {
+    > .child {
+        padding: 10px;
+    }
+}
+
+.class > {
+    .child {
+        padding: 10px;
+    }
+}
+
+.class {
+    > {
+        .child {
+            padding: 10px;
+        }
+    }
+}
+//#################################################################################
+
+// write sass code to implement the next selector
+// .class {
+//     font-weight: bold;
+//     font-size: 20px;
+//   }
+
+.class {
+    font : {
+        size: 20px;
+        weight: bold;
+    }
+}
+
+//##################################################################################
+
+//Guess the output and explanin the code
+// .parent {
+//     & + .sibling {
+//       margin: auto {
+//         top: 10px;
+//       }
+//       & ~ .last {
+//         padding: 10px;
+//       }
+//     }
+//   }
+
+//output 
+
+.parent + .sibling {
+    margin: auto;
+    margin-top: 10px;
+}
+
+.parent + .sibling ~ .last {
+    padding: 10px;
+}
+
+//Explain
+//1- first & : we're inside the .parent so it refers to .parent
+//2- second & : we're inside the .sibling so it referes to .sibling
+
+//##################################################################################
+
+// write sass to have this output
+  .widget {
+    background-color: white;
+    padding: 20px;
+  }
+  .main-border {
+    border: 1px solid #CCC
+  }
+  .my-class {
+    @extend .widget;
+    @extend .main-border;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+  
+//   // Needed Output
+//   .widget, .my-class {
+//     background-color: white;
+//     padding: 20px;
+//   }
+//   .main-border, .my-class {
+//     border: 1px solid #CCC;
+//   }
+//   .my-class {
+//     font-weight: bold;
+//     margin: 20px auto;
+//   }
+
+//##################################################################################
+
+// my code start
+%widget {
+    background-color: white;
+    padding: 20px;
+  }
+  %main-border {
+    border: 1px solid #CCC
+  }
+  .my-class {
+    @extend %main-border;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+//my code end
+
+  // Needed Output
+//   .my-class {
+//     background-color: white;
+//     padding: 20px;
+//   }
+//   .my-class {
+//     border: 1px solid #CCC;
+//   }
+//   .my-class {
+//     font-weight: bold;
+//     margin: 20px auto;
+//   }
+
+//################################################################################
+
+// Needed Output
+// .box h2, .box p {
+//     font-size: 20px;
+//   }
+//   @media (max-width: 575px) {
+//     .box h2, .box p {
+//       font-size: 16px;
+//     }
+//     .box h2 span, .box p span {
+//       font-weight: bold;
+//     }
+//   }
+
+//my code start
+.box {
+    h2 {
+        font-size: 20px;
+    }
+    p{
+        @extend h2;
+        span {
+            @extend span;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .box {
+        h2 {
+            font-size: 16px;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+//my code end
+
+//###################################################################################
+
+// The Code
+// Do Not Edit Here
+$red: #e91e63;
+$green: #009688;
+
+//my code start
+$link-color: $green;
+
+$link-hover: $red;
+
+//my code end
+
+// Do Not Edit Here
+.box a {
+  color: $link-color;
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+// Needed Output
+// .box a {
+//   color: #009688;
+// }
+// .box a:hover {
+//   color: #e91e63;
+// }
+
+//##############################################################################3
+
+.box {
+    font-size: 20px;
+    &-holder {
+        width: 1000px;
+        &-content {
+            margin: auto;
+        }
+    }
+}
+
+// .box {
+//     font-size: 20px;
+//   }
+//   .box-holder {
+//     width: 1000px;
+//   }
+//   .box-holder-content {
+//     margin: auto;
+//   }
